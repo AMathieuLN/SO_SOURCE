@@ -8,11 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Introduction
-      - data_info.qmd
-      - PGD.qmd
-      - repository.qmd
+      - href: data_info.qmd
+        text: donnees_de_recherche
+      - href: PGD.qmd
+        text: PGD
+      - href: repository.qmd
         text: entrepot
-      - DP.qmd
+      - href: DP.qmd
+        text: datapaper
 
 format:
   html:

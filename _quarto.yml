@@ -9,13 +9,13 @@ website:
       - href: index.qmd
         text: Introduction
       - href: data_info.qmd
-        text: donnees_de_recherche
+        text: Éléments introductifs sur les données
       - href: PGD.qmd
-        text: PGD
+        text: Élaborer un Plan de Gestion des Données (PGD)
       - href: repository.qmd
-        text: entrepot
+        text: Déposer ses données
       - href: DP.qmd
-        text: datapaper
+        text: Publier un data paper
 
 format:
   html:

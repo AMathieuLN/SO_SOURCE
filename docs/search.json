@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Outils fondamentaux de la science ouverte : PGD, entrepôt de données et data paper",
+    "section": "",
+    "text": "version avril 2024\nCe manuel est le fruit des journées Science Ouverte de l’UMI SOURCE d’avril 2024 à Abidjan (Côte d’Ivoire). Il offre une introduction à outils essentiels de la science ouverte :\nConçu pour être évolutif et collaboratif, ce texte s’enrichira progressivement grâce aux contributions des partenaires des antennes de l’UMI SOURCE en Côte d’Ivoire, France, Madagascar et Sénégal. Ainsi, ce manuel vise à être une ressource vivante, qui grandit et s’adapte aux besoins de la communauté scientifique engagée dans la pratique de la science ouverte."
+  },
+  {
+    "objectID": "index.html#quest-ce-que-la-science-ouverte",
+    "href": "index.html#quest-ce-que-la-science-ouverte",
+    "title": "Outils fondamentaux de la science ouverte : PGD, entrepôt de données et data paper",
+    "section": "Qu’est-ce que la “science ouverte” ?",
+    "text": "Qu’est-ce que la “science ouverte” ?\nLa science ouverte marque un changement profond dans la culture de la recherche, influençant à la fois notre façon de créer de la connaissance (transformation épistémologique) et l’utilisation de nouvelles technologies. Elle met en avant la transparence et la collaboration entre chercheurs. Adopter cette approche offre plusieurs avantages : elle permet de reproduire plus facilement les résultats obtenus par d’autres, stimulant ainsi la confiance et l’efficacité scientifiques. De plus, elle encourage l’innovation et la créativité, ouvrant la voie à de nouvelles découvertes et avancées.\nQuelques définitions issues de la littérature :\n\n“Open Science is transparent and accessible knowledge that is shared and developed through collaborative networks” (Vicente-Saez and Martinez-Fuentes 2018).\n“an inclusive construct that combines various movements and practices aiming to make multilingual scientific knowledge openly available, accessible and reusable for everyone, to increase scientific collaborations and sharing of information for the benefits of science and society, and to open the processes of scientific knowledge creation, evaluation and communication to societal actors beyond the traditional scientific community” (UNESCO 2021).\n“collaborature culture enabled by technology that empowers the open sharing of data, information, and knowledge within the scientific community and the wider public to accelerate scientific research and understanding” (Ramachandran, Bugbee, and Murphy 2021)."
+  }
+]

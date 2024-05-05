@@ -1,0 +1,39 @@
+---
+title: "Outils fondamentaux de la science ouverte : PGD, entrepôt de données et data paper"
+bibliography: references.bib
+image: affiche_SO_avrilCI.png
+about:
+    template: trestles
+    image-width: 18em
+    links:
+      - text: alexmathieu.ln@gmail.com
+        icon: envelope
+      - text: AMathieuLN
+        icon: github
+      - text: https://www.linkedin.com/in/alexandre-mathieu-28100519a/
+        icon: linkedin
+      - text: https://www.umi-source.uvsq.fr/m-alexandre-mathieu
+        icon: link-45deg
+---
+
+-   *version avril 2024*
+
+Ce manuel est le fruit des [journées Science Ouverte de l'UMI SOURCE d'avril 2024 à Abidjan (Côte d'Ivoire)](https://www.umi-source.uvsq.fr/journees-sciences-ouverte-2024). Il offre une introduction à outils essentiels de la science ouverte :
+
+1.  **Le plan de gestion de données (PGD)** : Un outil crucial pour organiser et sécuriser les données tout au long d'un projet de recherche.
+2.  **L'entrepôt de données** : Illustré ici par l'exemple de DataSuds, l'entrepôt de l'Institut de Recherche pour le Développement, qui sert à stocker et partager les données de recherche.
+3.  **Le data paper** : Une publication scientifique qui détaille et contextualise les jeux de données, facilitant leur compréhension et réutilisation.
+
+Conçu pour être [évolutif]{style="color: purple;"} et [collaboratif]{style="color: purple;"}, ce texte s'enrichira progressivement grâce aux contributions des partenaires des antennes de l'UMI SOURCE en Côte d'Ivoire, France, Madagascar et Sénégal. Ainsi, ce manuel vise à être une [ressource vivante]{style="color: purple;"}, qui [grandit]{style="color: purple;"} et s'[adapte]{style="color: purple;"} aux besoins de la communauté scientifique engagée dans la pratique de la science ouverte.
+
+## Qu'est-ce que la "science ouverte" ?
+
+La science ouverte marque un changement profond dans la [culture]{style="color: purple;"} de la recherche, influençant à la fois notre façon de créer de la connaissance ([transformation épistémologique]{style="color: purple;"}) et l'utilisation de nouvelles [technologies]{style="color: purple;"}. Elle met en avant la [transparence]{style="color: purple;"} et la [collaboration]{style="color: purple;"} entre chercheurs. Adopter cette approche offre plusieurs avantages : elle permet de reproduire plus facilement les résultats obtenus par d'autres, stimulant ainsi la confiance et l'efficacité scientifiques. De plus, elle encourage l'innovation et la créativité, ouvrant la voie à de nouvelles découvertes et avancées.
+
+Quelques définitions issues de la littérature :
+
+-   "Open Science is transparent and accessible knowledge that is shared and developed through collaborative networks" [@vicente-saez2018].
+
+-   "an inclusive construct that combines various movements and practices aiming to make multilingual scientific knowledge openly available, accessible and reusable for everyone, to increase scientific collaborations and sharing of information for the benefits of science and society, and to open the processes of scientific knowledge creation, evaluation and communication to societal actors beyond the traditional scientific community" [@unesco2021].
+
+-   "collaborature culture enabled by technology that empowers the open sharing of data, information, and knowledge within the scientific community and the wider public to accelerate scientific research and understanding" [@ramachandran2021].

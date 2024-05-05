@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Science ouverte à l'UMI SOURCE"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Introduction
+      - data_info.qmd
+      - PGD.qmd
+      - repository.qmd
+      - DP.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    include-css: styles.css
+    toc: true
+
+
+

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Science ouverte à l’UMI SOURCE - Élaborer un Plan de Gestion des Données (PGD)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Science ouverte à l’UMI SOURCE</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Introduction</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data_info.html"> 
+<span class="menu-text">donnees_de_recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./PGD.html" aria-current="page"> 
+<span class="menu-text">PGD</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./repository.html"> 
+<span class="menu-text">entrepot</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./DP.html"> 
+<span class="menu-text">datapaper</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#le-pgd-quest-ce-que-cest" id="toc-le-pgd-quest-ce-que-cest" class="nav-link active" data-scroll-target="#le-pgd-quest-ce-que-cest">1. Le PGD : qu’est-ce que c’est ?</a></li>
+  <li><a href="#quel-format-adopter" id="toc-quel-format-adopter" class="nav-link" data-scroll-target="#quel-format-adopter">2. Quel format adopter ?</a></li>
+  <li><a href="#qui-rédige-le-pgd" id="toc-qui-rédige-le-pgd" class="nav-link" data-scroll-target="#qui-rédige-le-pgd">3. Qui rédige le PGD ?</a></li>
+  <li><a href="#quel-intérêts-du-pgd" id="toc-quel-intérêts-du-pgd" class="nav-link" data-scroll-target="#quel-intérêts-du-pgd">4. Quel intérêts du PGD ?</a></li>
+  <li><a href="#le-pgd-outil-contraignant" id="toc-le-pgd-outil-contraignant" class="nav-link" data-scroll-target="#le-pgd-outil-contraignant">5. Le PGD outil contraignant ?</a></li>
+  <li><a href="#quelques-références" id="toc-quelques-références" class="nav-link" data-scroll-target="#quelques-références">6. Quelques références</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Élaborer un Plan de Gestion des Données (PGD)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="le-pgd-quest-ce-que-cest" class="level2">
+<h2 class="anchored" data-anchor-id="le-pgd-quest-ce-que-cest">1. Le PGD : qu’est-ce que c’est ?</h2>
+<p>Le terme “Plan de Gestion des Données” (PGD) est issu de l’<span style="color: purple;">anglicisme “Data Management Plan” (DMP)</span>. Le PGD est un document <span style="color: purple;"><em>structuré</em></span> et <span style="color: purple;"><em>évolutif</em></span> qui décrit l’ensemble des données produites ou utilisées dans le cadre d’un projet ou d’une structure. Ce plan sert à <span style="color: purple;">inventorier les questions essentielles</span> concernant l’acquisition, la gestion, la conservation, ou le partage des données de recherche.</p>
+<p>Rédiger le PGD revient à élaborer une sorte de <span style="color: purple;">check-list</span> qui aide à structurer le document et à s’assurer que tous les aspects importants de la gestion des données sont couverts. Ce processus guide la manière de gérer chaque type de données. Étant donné que le PGD est évolutif, il <span style="color: purple;">peut être révisé et adapté à plusieurs reprises tout au long du projet</span>. Par exemple, le programme Horizon Europe recommande la rédaction de trois versions du PGD : une dans les six premiers moi,s une autre durant le projet, et une versino finale à son achèvement.</p>
+<p>Le PGD <span style="color: purple;">accompagne le cycle de vie</span> des données en prenant en compte toutes ses étapes, depuis la création et la collecte jusqu’) la préservation, le partage, l’accès, et la réutilisation des données. Il aborde des questions crucialestelles que les mesures pour garantir la confidentialité des données. En somme, le PGD permet aux chercheurs et à leurs collaborateurs de se réunir pour <span style="color: purple;">planifier efficacement</span> la gestion des données dès le début du projet, assurant ainsi leur protection, leur sécurité et leur valorisation optimale. C’est un outil stratégique essentiel pour toute équipe de recherche.</p>
+</section>
+<section id="quel-format-adopter" class="level2">
+<h2 class="anchored" data-anchor-id="quel-format-adopter">2. Quel format adopter ?</h2>
+<p>Bien qu’il existe différents modèles (’<em>templates’</em>) de PGD, le <span style="color: purple;">contenu de base reste largement similaire d’un modèle à l’autre</span>. Ces modèles varient principalement dans les questions spécifiques posées, mais ils couvrent tous une série d’éléments fondamentaux qui apparaissent systématiquement. Ces éléments principaux incluent généralement des questions sur la collecte des données, leur stockage, gestion, partgae, préservation, et les mesures de sécurité et de confidentialité à appliquer. Ainsi, malgré les variations dans les questions ou la structure des différents modèles, l’objectif central reste le même : <span style="color: purple;">assurer une gestion efficace et sécurisée des données tout au long de leur cycle de vie, conformément aux exigences du projet et des normes de recherche en vigueur</span>. Ces mêmes éléments principaux apparaissent systématiquement (<a href="https://doranum.fr/plan-gestion-donnees-dmp/plan-de-gestion-des-donnees-fiche-synthetique_10_13143_cgv4-0k53/">fiche synthétique Doranum</a>) :</p>
+<p><img src="images/elements_PGD.png" class="img-fluid"></p>
+<p>La plateforme <span style="color: purple;">DMP Opidor</span> offre un support en ligne pour la rédaction des Plans de Gestion des Données (PGD). L’Institut de Recherche pour le Développement (IRD) recommande d’utiliser le modèle fourni par l’Agence Nationale de la Recherche (ANR), jugé adapté à toutes les disciplines. L’interface DMP Opidor est conçue pour guider les chercheurs à travers le processus de rédaction du PGD en posant des questions pertinentes qui couvrent les différents aspects de la gestion des données, facilitant ainsi une approche structurée et complète adaptée à un large éventail de domaines de recherche.</p>
+<p><em>Tableau 3. Éléments principaux d’un PGD</em></p>
+<table class="table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 62%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Éléments</th>
+<th>Commentaires</th>
+<th>Types de questions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Description des données</td>
+<td>Lors de la rédaction d’un PGD, il est crucial de décrire précisément <strong>quelles données seront collectées ou produites au cours du projet</strong>. Cela inclut une identification détaillée des <strong>types</strong> de données (numériques, textuelles, audiovisuelles, etc.), des <strong>formats</strong> dans lesquels elles seront sauvegardées (PDF, Excel, JPEG, etc.) ou du volume de données attendu (en téraoctets, gigaoctets, etc.). Il est également important de spécifier comment ces données seront obtenues, en distinguant entre les données préexistantes qui seront utilisées et les nouvelles données qui seront générées spécifiquement pour le projet. Cette étape permet de s’assurer que toutes les données pertinentes sont prises en compte et gérées de manière adéquate tout au long du projet.</td>
+<td><p>Il conviendra de décrire :</p>
+<ol type="1">
+<li><strong>Le type de données</strong> : Précisez la nature des données, comme numériques, textuelles, images, audio, vidéos, etc., ainsi que les logiciels qui seront utilisés pour les créer ou les traiter.</li>
+<li><strong>Les formats des données</strong> : Indiquez les formats dans lesquels les données seront sauvegardées, en privilégiant les formats ouverts (tels que .txt, .csv, pdf, .gif, etc.) pour faciliter l’accessibilité et la réutilisation.</li>
+<li><strong>La provenance des données</strong> : Décrivez d’où proviendront les données, que ce soit par la collecte de nouvelles données, la conversion ou transformation de données existantes, le partage ou l’échange avec d’autres chercheurs, ou encore l’achat.</li>
+<li><strong>Méthodes et outils employés</strong> : Détaillez les méthodes et les outils qui seront utilisés pour collecter, traiter, et analyser les données, en soulignant toute technologie ou technique spécifique nécessaire pour le projet.</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td>Documentation et qualité</td>
+<td><p>Il est important de spécifier plusieurs aspects techniques pour assurer une bonne organisation et gestion des données :</p>
+<ol type="1">
+<li><p><strong>Métadonnées et standards</strong> : Identifiez les métadonnées qui seront utilisées pour décrire les données collectées, y compris les standards de métadonnées à adopter. Les métadonnées facilitent la recherche, l’accès et la réutilisation des données, et doivent être choisies selon les normes reconnues dans votre domaine.</p></li>
+<li><p><strong>Structuration des dossiers et nommage des fichiers</strong> : Décrivez la manière dont les dossiers seront organisés et les fichiers nommés. Il convient de mettre en place des conventions de nommage claires qui incluent des informations pertinentes telles que la date, le type de données, et d’autres identifiants utiles. Cela aide à retrouver facilement les données et à comprendre leur contenu sans avoir à les ouvrir.</p></li>
+<li><p><strong>Gestion des versions</strong> : Établissez des procédures pour la gestion des versions des fichiers pour éviter la confusion entre les différentes mises à jour ou modifications des données. Cela inclut la documentation des changements et la conservation des versions précédentes pour référence ultérieure.</p></li>
+<li><p><strong>Contrôle qualité</strong> : Précisez les méthodes de contrôle qualité qui seront utilisées pour s’assurer de l’intégrité et de l’exactitude des données. Cela peut inclure des procédures de vérification des données, des méthodes d’analyse et la définition des unités de mesure.</p></li>
+</ol></td>
+<td><p>Voici les aspects à clarifier :</p>
+<ol type="1">
+<li><p><strong>Production des métadonnées</strong> : Expliquez le processus par lequel les métadonnées seront générées. Il est important de spécifier qui sera responsable de leur création, les informations qu’elles incluront, et comment elles seront maintenues à jour tout au long du projet.</p></li>
+<li><p><strong>Standards de métadonnées</strong> : Identifiez les standards ou schémas de métadonnées qui seront utilisés, tels que Datacite, Dublin Core, ou d’autres pertinents à votre discipline. L’utilisation de standards reconnus garantit que les métadonnées sont cohérentes, interopérables et réutilisables par d’autres chercheurs ou plateformes.</p></li>
+<li><p><strong>Procédure de contrôle qualité des données</strong> : Détaillez les méthodes de contrôle qualité qui seront mises en place pour s’assurer de la précision et de la fiabilité des données collectées. Cela peut inclure la vérification de la saisie des données, la validation des données par des revues croisées, et d’autres mécanismes de contrôle pour minimiser les erreurs et garantir la qualité des données.</p></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td>Sauvegarde et stockage des données au cours du projet</td>
+<td>Comment les données seront-elles <strong>stockées</strong> et <strong>sauvegardées</strong> tout au long du processus de recherche ? Il s’agit ici d’expliquer <strong>quel processus de stockage des données</strong> sera mis en place durant le projet, afin d’en garantir l’accès pour l’ensemble des collaborateurs du projet.</td>
+<td><ol type="1">
+<li>Quels seront les supports de stockage (sereur sécurisé de votre institution, espace de travail collaboratif, etc.) ?</li>
+<li>Quel système de nommage sera utilisé ? La fiabilité d’accès aux données pour l’ensemble d’une équipe passe par un système de nommage unique et précis des fichiers.</li>
+<li>Quelle sera la volumétrie des données ? Une estimation suffit</li>
+<li>Comment sera organisée la sauvegarde des données ?</li>
+<li>Comment sont gérées les versions ?</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td>Exigences légales et éthiques</td>
+<td><p>Il est crucial d’aborder les implications éthiques et juridiques associées à la collecte, l’utilisation et le partage des données. Voici les questions importantes à considérer :</p>
+<ol type="1">
+<li><p><strong>Nature des données</strong> : Déterminez si les données collectées ou utilisées sont de nature sensible. Cela peut inclure des informations personnelles, des données de santé, des détails financiers, etc., qui nécessitent des précautions particulières en termes de gestion et de protection.</p></li>
+<li><p><strong>Questions éthiques et juridiques</strong> : Identifiez les enjeux éthiques et les obligations légales spécifiques liés à vos données. Cela peut concerner la confidentialité, le consentement des participants, les droits à la protection des données personnelles, et les règles de partage des données.</p></li>
+<li><p><strong>Anonymisation des données</strong> : Expliquez comment sera assurée l’anonymisation ou la pseudonymisation des données sensibles pour protéger l’identité des participants. Précisez les techniques qui seront utilisées pour retirer ou masquer les identifiants personnels, garantissant ainsi que les données ne puissent pas être reliées à une personne spécifique sans accès à des informations supplémentaires.</p></li>
+</ol></td>
+<td><ol type="1">
+<li>Qui sera titulaire des droits de propriété intellectuelle sur les données (qui aura le droit d’en contrôler l’accès) ?</li>
+<li>Est-ce qu’un accord de consortium a été rédigé, si le projet se déroule dans le cadre d’un partenariat ?</li>
+<li>Est-ce que des données protégées par des droits spécifiques seront utilisées au cours du projet : par exemple, des données personnelles, des bases de données etc…</li>
+<li>Quelles mesures seront prises pour garantir la confidentialité des données personnelles ? Pour des données personnelles par exemple, vous pouvez envisager la pseudonymsation ou l’anonymisation, vous pouvez aussi envisager le chiffrement des données.</li>
+<li>Il faut mentionner l’existence d’éventuels comités d’éthique pour votre institution ou unité.</li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td>Stratégie de partage et d’ouverture des données</td>
+<td>Le PGD doit montrer qu’une réflexion est menée à propos de l’ouverture et du partage de vos données, tout en gardant le principe « aussi ouvert que possible, aussi fermé que nécessaire » au cœur de la démarche.</td>
+<td><p>Possibilité de préciser :</p>
+<ol type="1">
+<li>S’il y a une obligation de partage</li>
+<li>S’il y a une restriction ou interdiction de partage, par exemple pour des raisons éthiques, si les données seront confidentielles ou personnelles, soumises à une propriété intellectuelle, commerciale, ou pour des raisons de sécurité.</li>
+<li>Avec qui les données seront partagées (accès ouvert ou restreint) ? Sachant que même si vos données seront libre accès, vous pouvez décider quand même d’un embargo sur ces données avant de les rendre publiques.</li>
+<li>Dans quel entrepôt les données seront-elles déposées ?</li>
+<li>Quelles licences seront appliquées ?</li>
+<li>Un identifiant pérenne (ex:DOI) sera-t-il attribué ?</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td>Préservation à long terme des données</td>
+<td>Vous aurez à aborder aussi l’aspect « préservation à long terme : quel archivage à long terme pour quelles données ? Dans quelles conditions ?</td>
+<td><ol type="1">
+<li>Quelles sont les données sélectionnées pour l’archivage</li>
+<li>Quelle volumétrie prévue pour ces données ?</li>
+<li>Quelle durée de conservation à long terme ?</li>
+<li>Quel budget prévu pour l’archivage ?</li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="qui-rédige-le-pgd" class="level2">
+<h2 class="anchored" data-anchor-id="qui-rédige-le-pgd">3. Qui rédige le PGD ?</h2>
+<p>Généralement, c’est le <span style="color: purple;">porteur du projet ou le principal chercheur</span> qui rédige la première version du Plan de Gestion des Données (PGD), mais l’élaboration de ce document peut bénéficier de l’apport de <span style="color: purple;">plusieurs autres acteurs</span>. Ces derniers peuvent inclure des co-chercheurs, des gestionnaires de données, des bibliothécaires spécialisés en sciences de l’information, et des conseillers juridiques, tous contribuant à différents aspects du PGD.</p>
+<p>De plus, pour aider l’auteur dans la rédaction d’un PGD, <span style="color: purple;">diverses ressources en ligne</span> et <span style="color: purple;">feuilles de route</span> sont disponibles. Ces outils offrent des conseils, des modèles, et des recommandations spécifiques pour aborder les différentes sections du PGD, assurant que toutes les exigences légales, éthiques, et de gestion sont couvertes. Ces ressources sont conçues pour faciliter le processus d’écriture du PGD, le rendant plus accessible et moins intimidant pour les chercheurs.</p>
+<p><strong>Tableau 4. Ressources pour accompagner la rédaction d’un PGD</strong> [<a href="https://www.youtube.com/watch?v=SA4I-vxUKeM&amp;t=8621s">Doucouré &amp; Hensens “Préalable et socle d’une bonne gestion des données scientifiques” 2023</a>]</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><strong>Exemples de PGD</strong></td>
+<td><strong>Quelques sites de référence</strong></td>
+<td><strong>Respecter les standards de sa communauté</strong></td>
+<td><strong>Services d’appuis</strong></td>
+</tr>
+<tr class="even">
+<td><ul>
+<li><p><a href="https://dmp.opidor.fr/">DMP OPIDoR</a></p></li>
+<li><p>DMP <a href="https://opidor.fr/des-dmp-primes/">primés</a></p></li>
+<li><p><a href="https://www.dcc.ac.uk/">DCC</a></p></li>
+<li><p><a href="https://dmptool.org/">DMPTool</a></p></li>
+</ul></td>
+<td><ul>
+<li><p><a href="https://data.ird.fr/">IRD Data</a></p></li>
+<li><p><a href="https://coop-ist.cirad.fr/">Coopist CIRAD</a></p></li>
+<li><p>Datapartage INRAE</p></li>
+<li><p><a href="https://doranum.fr/">Doranum</a></p></li>
+<li><p>DCC</p></li>
+</ul></td>
+<td><ul>
+<li><p>Recommandations UNESCO (2021)</p></li>
+<li><p>Le site <a href="https://scienceeurope.org/">Science Europe</a> établit des recommandations</p></li>
+<li><p>Modèles des financeurs lors d’une réponse à appel d’offre.</p></li>
+</ul></td>
+<td><ul>
+<li><p>Bibliothécaires</p></li>
+<li><p>Ingénieurs</p></li>
+<li><p>Référents données de votre laboratoire</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="quel-intérêts-du-pgd" class="level2">
+<h2 class="anchored" data-anchor-id="quel-intérêts-du-pgd">4. Quel intérêts du PGD ?</h2>
+<p><em>Tableau 5. Avantages collectifs et individuels liés à l’élaboration d’un PGD</em></p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Avantages collectifs</th>
+<th>Avantages individuels</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ol type="1">
+<li><strong>Gage de bonne gestion des données</strong> : Le PGD est reconnu par les bailleurs de fonds et les pairs comme un indicateur de bonne gestion des données, contribuant ainsi à la traçabilité et à la reproductibilité des données, et améliorant leur qualité globale.</li>
+<li><strong>En suivant les principes FAIR</strong> :
+<ul>
+<li><p>Assure la reproductibilité des expériences en décrivant clairement les données.</p></li>
+<li><p>Facilite la réutilisation en garantissant la compréhension des données.</p></li>
+<li><p>Permet un stockage sûr pour éviter les pertes de données.</p></li>
+<li><p>Clarifie le cadre juridique et éhtique, respectant ainsi les droits et la dignité des personnes.</p></li>
+<li><p>Spécifie les modalités de partage de données, clarifiant les droits de réutilisation.</p></li>
+<li><p>Définit les responsabilités concernant la gestion des données pendant le projet.</p></li>
+</ul></li>
+</ol></td>
+<td><ol type="1">
+<li><strong>Support pour la gestion des données</strong> : Le PGD sert de guide pour la gestion des données, offrant une structure et une vue globale sur l’ensemble des données manipulées dans le projet.</li>
+<li><strong>Développement professionnel</strong> : Pour un jeune chercheur notamment, maîtriser la rédaction et l’application d’un PGD est une compétence valorisée qui peut améliorer les perspectives de carrière, notamment pour l’obtention de contrats ou de postes futurs.</li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="le-pgd-outil-contraignant" class="level2">
+<h2 class="anchored" data-anchor-id="le-pgd-outil-contraignant">5. Le PGD outil contraignant ?</h2>
+<p>Effectivement, l’élaboration d’un PGD peut initialement sembler être une contrainte supplémentaire, surtout en considérant les diverses exigences déjà présentes dans les demandes de financement et la rédaction de projets de recherche. Cependant, il est important de noter que bien que la première rédaction d’un PGD puisse prendre un peu de temps, surtout en raison de la familiarisation avec le processus, ce <span style="color: purple;">coût initial d’entrée est souvent rapidement compensé</span>.</p>
+<p>Une fois que les chercheurs acquièrent de l’expérience avec leur premier PGD, les rédactions suivantes deviennent <span style="color: purple;">beaucoup plus rapides</span> et <span style="color: purple;">moins laborieuses</span>. Si vous travaillez régulièrement avec le même type de données et les mêmes organismes, de nombreux aspects du PGD peuvent être réutilisés ou légèrement adaptés, ce qui réduit considérablement le temps et l’effort nécessaires pour les versions ultérieures. Ainsi, le PGD devient non seulement une partie intégrante de la gestion efficace des données, mais aussi un outil plus maniable et moins intimidant au fil du temps.&nbsp;</p>
+</section>
+<section id="quelques-références" class="level2">
+<h2 class="anchored" data-anchor-id="quelques-références">6. Quelques références</h2>
+<ul>
+<li><p>Recommandations de l’ANR pour le PGD.</p></li>
+<li><p>Opidor :&nbsp;</p></li>
+</ul>
+<ol type="1">
+<li><p>DMP Opidor : après créatino d’un compte vous pouvez créer vos plans de PGD.</p></li>
+<li><p>Cat OPIDoR&nbsp;</p></li>
+<li><p>Livret “<a href="https://doranum.fr/outils-services-gestion-partage-donnees-recherche/">Outils et services pour accompagner a gestion des données de la recherche</a>”</p></li>
+</ol>
+<ul>
+<li><p>Guide pratique pour une harmonisation internationale de la gestion des données de recherche</p></li>
+<li><p>Doranum aspects juridiques</p></li>
+<li><p>Le site Ouvrir la science</p></li>
+<li><p>Vidéos “La journée Science Ouverte de l’IRD” à l’Université Virtuelle de Côte d’Ivoivre, Abidjan :</p>
+<ul>
+<li><p>https://www.youtube.com/watch?v=F6qE4Zl1y4k&amp;t=10926s</p></li>
+<li><p>https://www.youtube.com/watch?v=SA4I-vxUKeM&amp;t=8621s</p></li>
+</ul></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

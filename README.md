@@ -1,6 +1,6 @@
 # SO_SOURCE
 
-Manuel d'introduction à la science ouverte, dédié à l'ensemble des antennes et partenaires de l'Unité Mixte Internationale Soutenabilité et résilience (UMI SOURCE), accessible en ligne : 
+Manuel d'introduction à la science ouverte, dédié à l'ensemble des antennes et partenaires de l'Unité Mixte Internationale Soutenabilité et résilience (UMI SOURCE). Accessible en ligne : https://amathieuln.github.io/SO_SOURCE/
 
 Il est le fruit des journées Science Ouverte de l’UMI SOURCE d’avril 2024 à Abidjan (Côte d’Ivoire). Il offre une introduction à 3 outils essentiels de la science ouverte :
 

@@ -5,7 +5,7 @@ editor: visual
 
 ## 1. Le PGD : qu'est-ce que c'est ?
 
-Test123 Le terme "Plan de Gestion des Données" (PGD) est issu de l'[anglicisme "Data Management Plan" (DMP)]{style="color: purple;"}. Le PGD est un document [*structuré*]{style="color: purple;"} et [*évolutif*]{style="color: purple;"} qui décrit l'ensemble des données produites ou utilisées dans le cadre d'un projet ou d'une structure. Ce plan sert à [inventorier les questions essentielles]{style="color: purple;"} concernant l'acquisition, la gestion, la conservation, ou le partage des données de recherche.
+Test1234 Le terme "Plan de Gestion des Données" (PGD) est issu de l'[anglicisme "Data Management Plan" (DMP)]{style="color: purple;"}. Le PGD est un document [*structuré*]{style="color: purple;"} et [*évolutif*]{style="color: purple;"} qui décrit l'ensemble des données produites ou utilisées dans le cadre d'un projet ou d'une structure. Ce plan sert à [inventorier les questions essentielles]{style="color: purple;"} concernant l'acquisition, la gestion, la conservation, ou le partage des données de recherche.
 
 Rédiger le PGD revient à élaborer une sorte de [check-list]{style="color: purple;"} qui aide à structurer le document et à s'assurer que tous les aspects importants de la gestion des données sont couverts. Ce processus guide la manière de gérer chaque type de données. Étant donné que le PGD est évolutif, il [peut être révisé et adapté à plusieurs reprises tout au long du projet]{style="color: purple;"}. Par exemple, le programme Horizon Europe recommande la rédaction de trois versions du PGD : une dans les six premiers moi,s une autre durant le projet, et une versino finale à son achèvement.
 
